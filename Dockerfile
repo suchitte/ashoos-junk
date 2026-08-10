@@ -15,9 +15,10 @@ COPY . .
 RUN npx prisma generate && npm run build
 
 ENV NODE_ENV=production
+ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
 ENV DATABASE_URL="file:/app/data/journal.db"
 ENV UPLOAD_DIR="/app/data/uploads"
 EXPOSE 3000
 
-CMD ["sh", "-c", "mkdir -p /app/data/uploads && npx prisma db push && npm start"]
+CMD ["sh", "-c", "mkdir -p /app/data/uploads && npx prisma db push && exec next start --hostname 0.0.0.0 --port ${PORT:-3000}"]
