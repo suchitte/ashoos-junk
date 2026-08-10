@@ -21,4 +21,4 @@ ENV DATABASE_URL="file:/app/data/journal.db"
 ENV UPLOAD_DIR="/app/data/uploads"
 EXPOSE 3000
 
-CMD ["sh", "-c", "mkdir -p /app/data/uploads && npx prisma db push && exec next start --hostname 0.0.0.0 --port ${PORT:-3000}"]
+CMD ["sh", "-c", "mkdir -p /app/data/uploads && npx prisma db push && exec ./node_modules/.bin/next start --hostname 0.0.0.0 --port ${PORT:-3000}"]
