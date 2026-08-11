@@ -11,8 +11,39 @@
   --accent-soft: #4a7c6c;
   --line: rgba(26, 34, 28, 0.12);
   --glow: rgba(47, 93, 80, 0.18);
+  --surface: rgba(255, 255, 255, 0.45);
+  --surface-strong: rgba(232, 235, 228, 0.82);
+  --field: rgba(255, 255, 255, 0.55);
+  --hero-glow: rgba(74, 124, 108, 0.28);
+  --body-a: #eef1eb;
+  --body-b: #e3e8df;
+  --grain-opacity: 0.045;
   --background: var(--paper);
   --foreground: var(--ink);
+  color-scheme: light;
+}
+
+html.dark {
+  --ink: #e8ebe4;
+  --ink-soft: #c5d0c4;
+  --muted: #8a968e;
+  --paper: #121814;
+  --paper-deep: #1a221c;
+  --wash: #243028;
+  --accent: #7eb89f;
+  --accent-soft: #9dceb8;
+  --line: rgba(232, 235, 228, 0.12);
+  --glow: rgba(126, 184, 159, 0.18);
+  --surface: rgba(26, 34, 28, 0.55);
+  --surface-strong: rgba(18, 24, 20, 0.88);
+  --field: rgba(26, 34, 28, 0.72);
+  --hero-glow: rgba(126, 184, 159, 0.18);
+  --body-a: #0e1310;
+  --body-b: #161d18;
+  --grain-opacity: 0.07;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -27,6 +58,8 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-field: var(--field);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
 }
@@ -41,12 +74,13 @@ html {
 
 body {
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(197, 208, 196, 0.9), transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, rgba(213, 219, 210, 0.85), transparent 50%),
-    linear-gradient(180deg, #eef1eb 0%, var(--paper) 40%, #e3e8df 100%);
+    radial-gradient(1200px 600px at 10% -10%, var(--wash), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, var(--paper-deep), transparent 50%),
+    linear-gradient(180deg, var(--body-a) 0%, var(--paper) 40%, var(--body-b) 100%);
   color: var(--ink);
   font-family: var(--font-body), Georgia, serif;
   min-height: 100vh;
+  transition: background 0.35s ease, color 0.25s ease;
 }
 
 body::before {
@@ -54,7 +88,7 @@ body::before {
   pointer-events: none;
   position: fixed;
   inset: 0;
-  opacity: 0.045;
+  opacity: var(--grain-opacity);
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   z-index: 50;
 }
@@ -65,7 +99,7 @@ a {
 }
 
 ::selection {
-  background: rgba(47, 93, 80, 0.22);
+  background: var(--glow);
 }
 
 .site-shell {
@@ -115,6 +149,7 @@ a {
 
 .hero-wash {
   animation: softDrift 18s ease-in-out infinite;
+  background: radial-gradient(circle, var(--hero-glow), transparent 70%);
 }
 
 @media print {
@@ -129,5 +164,6 @@ a {
 
   body {
     background: white;
+    color: black;
   }
 }

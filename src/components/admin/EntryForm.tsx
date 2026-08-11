@@ -94,7 +94,7 @@ export function EntryForm({ initial }: { initial?: EntryFormValues }) {
   }
 
   const field =
-    "mt-2 w-full rounded-sm border border-[var(--line)] bg-white/50 px-3 py-2 text-ink outline-none focus:border-accent";
+    "mt-2 w-full rounded-sm border border-[var(--line)] bg-[var(--field)] px-3 py-2 text-ink outline-none focus:border-accent";
 
   return (
     <form onSubmit={onSubmit} className="space-y-6">
@@ -197,7 +197,7 @@ export function EntryForm({ initial }: { initial?: EntryFormValues }) {
         </label>
       </div>
 
-      <div className="rounded-sm border border-[var(--line)] bg-white/30 p-4">
+      <div className="rounded-sm border border-[var(--line)] bg-[var(--surface)] p-4">
         <label className="flex items-center gap-3 text-sm text-ink-soft">
           <input
             type="checkbox"

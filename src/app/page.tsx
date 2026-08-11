@@ -11,7 +11,7 @@ export default async function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-[var(--line)]">
-        <div className="hero-wash pointer-events-none absolute -right-20 top-0 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(74,124,108,0.28),transparent_70%)]" />
+        <div className="hero-wash pointer-events-none absolute -right-20 top-0 h-[420px] w-[420px] rounded-full" />
         <div className="site-shell relative grid min-h-[72vh] items-end gap-10 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:py-24">
           <div>
             <p className="fade-up text-xs uppercase tracking-[0.22em] text-accent">
@@ -39,7 +39,7 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
-          <aside className="fade-up-delay-2 self-end rounded-sm border border-[var(--line)] bg-[rgba(255,255,255,0.35)] p-6 backdrop-blur-sm">
+          <aside className="fade-up-delay-2 self-end rounded-sm border border-[var(--line)] bg-[var(--surface)] p-6 backdrop-blur-sm">
             <p className="text-xs uppercase tracking-[0.18em] text-muted">Themes</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {tags.length === 0 && (

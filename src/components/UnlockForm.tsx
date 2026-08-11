@@ -34,7 +34,7 @@ export function UnlockForm({ entryId }: { entryId: string }) {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="mt-2 w-full rounded-sm border border-[var(--line)] bg-white/50 px-3 py-2 text-ink outline-none focus:border-accent"
+          className="mt-2 w-full rounded-sm border border-[var(--line)] bg-[var(--field)] px-3 py-2 text-ink outline-none focus:border-accent"
           required
         />
       </label>

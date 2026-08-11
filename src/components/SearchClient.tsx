@@ -29,7 +29,7 @@ export function SearchClient({ initialQuery, results }: { initialQuery: string; 
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Search dates, tags, places, captions…"
-          className="w-full rounded-sm border border-[var(--line)] bg-white/50 px-4 py-3 text-ink outline-none focus:border-accent"
+          className="w-full rounded-sm border border-[var(--line)] bg-[var(--field)] px-4 py-3 text-ink outline-none focus:border-accent"
         />
         <button
           type="submit"
