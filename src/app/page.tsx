@@ -21,8 +21,7 @@ export default async function HomePage() {
               {siteConfig.name}
             </h1>
             <p className="fade-up-delay-2 mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
-              Flip through months like an album — captions, places, moods, and full-resolution
-              photos kept in one quiet place.
+              A little corner for the days that mattered!
             </p>
             <div className="fade-up-delay-2 mt-8 flex flex-wrap gap-3">
               <a
