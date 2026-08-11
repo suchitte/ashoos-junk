@@ -15,7 +15,7 @@ export default async function AdminLoginPage() {
         <p className="text-xs uppercase tracking-[0.18em] text-muted">Admin</p>
         <h1 className="display mt-3 text-4xl text-ink">Sign in</h1>
         <p className="mt-3 text-ink-soft">
-          One password for regular uploads. Change it in your environment variables.
+          Only if you are Aashu!
         </p>
         <div className="mt-8">
           <LoginForm />

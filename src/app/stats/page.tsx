@@ -23,8 +23,7 @@ export default async function StatsPage() {
       <p className="text-xs uppercase tracking-[0.18em] text-muted">The quiet metrics</p>
       <h1 className="display mt-3 text-4xl text-ink sm:text-5xl">Stats</h1>
       <p className="mt-3 max-w-2xl text-ink-soft">
-        Totals and streaks across the archive — enough to see the shape of the years, not a
-        dashboard.
+        Totals and streaks across the archive.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
